@@ -17,7 +17,7 @@ sms_application/
     └── sms_app.service # systemd unit service file
 ```
 
-## Importan Notes
+## Important Notes
 * Remember to replace the variable YOUR_IP_HERE in the `sms_app.conf` file with an actual IP or domain
 * Currently the application is using environment variables to store the credentials for testing purposes. Working on a more secure method (python secrets)
 * Make sure to update the information in the systemd unit file and set correct permissions
