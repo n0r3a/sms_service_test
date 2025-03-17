@@ -1,0 +1,12 @@
+[Unit]
+Description= SMS application
+After=network.target
+
+[Service]
+User=username # Replace with your username
+WorkingDirectory=/opt/sms_application/
+ExecStart=/usr/bin/python3 sms_app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

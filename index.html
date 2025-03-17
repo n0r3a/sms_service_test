@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send SMS</title>
+</head>
+<body>
+    <form action="/send_sms" method="POST">
+        <label for="from_number">From:</label><br>
+        <input type="text" id="from_number" name="from_number"><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"></textarea><br><br>
+
+        <label for="phone_number">Phone Number:</label><br>
+        <input type="text" id="phone_number" name="phone_number"><br><br>
+
+        <input type="submit" value="Send SMS">
+    </form>
+
+    <div id="message-container">
+        </div>
+
+    <button id="return-button" style="display: none;">Return to form</button>
+
+    <script>
+        const returnButton = document.getElementById('return-button');
+        returnButton.addEventListener('click', () => {
+            document.getElementById('message-container').innerHTML = '';
+            returnButton.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
+
