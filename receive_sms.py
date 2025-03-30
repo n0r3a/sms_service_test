@@ -2,7 +2,7 @@ from bottle import request, post, run
 import urllib.parse  
 
 
-@post('/elks/sms') 
+@post('/api/sms') 
 def sms():
     # Use request module and get the SMS data and use all available options
     sms_id = request.forms.get('id')
