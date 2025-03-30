@@ -1,4 +1,4 @@
-# SMS Application for testing
+# sms application for testing purposes
 This is a tiny sms application, built with python (bottle). One is for sending sms and the other for receiving sms
 Tested and working together with nginx and SSL
 
