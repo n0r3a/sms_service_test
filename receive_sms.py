@@ -4,7 +4,7 @@ import urllib.parse
 
 @post('/api/sms') 
 def sms():
-    # Use request module and get the SMS data and use all available options
+    # use request module and get the SMS data and use all available options
     sms_id = request.forms.get('id')
     from_number = request.forms.get('from')
     to_number = request.forms.get('to')
@@ -15,7 +15,7 @@ def sms():
     # decode url-encoded message
     message = urllib.parse.unquote(message_encoded)
 
-    # Print SMS data 
+    # print sms data 
     print(f"SMS ID: {sms_id}")
     print(f"From: {from_number}")
     print(f"To: {to_number}")
@@ -23,10 +23,10 @@ def sms():
     print(f"Created: {created}")
     print(f"Direction: {direction}")
 
-    # Automatic reply
+    # automatic reply
 	reply_message = "Thank you for your message! =)"
 
-    # Send the reply back
+    # send the reply back
     return reply_message 
 
 run(host='127.0.0.1', port=5501)
